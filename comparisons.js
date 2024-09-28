@@ -27,3 +27,7 @@ let myObj = {
 // all the primitive types use stack memory, non primitive use heap memory
 // when we access a primitive data type we get a copy of the original, when we access the non primitive one we get a reference
 
+//terniary operator :
+// condition ? true : false
+const age = 20;
+age >= 20 ? console.log("Age is greater or equal to 20") : console.log("Age is less than 20");  

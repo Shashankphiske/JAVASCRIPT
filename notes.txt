@@ -1,0 +1,12 @@
+javascript is single threaded
+
+Javascript execution context:
+1) global execution context : allocated inside this
+2) function execution context
+3) eval execution context
+
+the javascript runs in 2 phases :
+1) memory creation phase
+2) execution phase
+
+a call stack is used to handle the working of the javascript code
