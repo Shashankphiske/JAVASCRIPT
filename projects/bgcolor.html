@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BG COLOR CHANGER</title>
+</head>
+<body id="bodyTag">
+    <h1 style="margin-left: 10%; margin-top:5%">Color Scheme Switcher</h1>
+    <div style="margin-left: 30%; margin-top:10%">
+        <button class="btn btn1" id="btn1"></button>
+        <button class="btn btn2" id="btn2"></button>
+        <button class="btn btn3" id="btn3"></button>
+        <button class="btn btn4" id="btn4"></button>
+    </div>
+</body>
+<style>
+    .btn{
+        width: 100px;
+        height: 100px;
+    }
+    .btn1{
+        background-color: grey;
+    }
+    .btn2{
+        background-color: white;
+    }
+    .btn3{
+        background-color: blue;
+    }
+    .btn4{
+        background-color: yellow;
+    }
+</style>
+<script>
+    const body = document.getElementById("bodyTag")
+    const buttons = document.querySelectorAll(".btn");
+    buttons.forEach(function(button){
+        console.log(button)
+        button.addEventListener("click", function(e){
+            console.log(e.target)
+            if(e.target.id === "btn1"){
+                body.style.backgroundColor = "grey"
+            }
+            if(e.target.id === "btn2"){
+                body.style.backgroundColor = "white"
+            }
+            if(e.target.id === "btn3"){
+                body.style.backgroundColor = "blue"
+            }
+            if(e.target.id === "btn4"){
+                body.style.backgroundColor = "yellow"
+            }
+        });
+    });   
+</script>
+</html>

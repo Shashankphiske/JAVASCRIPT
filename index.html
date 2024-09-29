@@ -4,10 +4,26 @@
     <meta charset="UTF-8">
     <title>Document</title>
 </head>
-<body>
-    <div class="bg_black">
-        <h1>Shashank Phiske</h1>
-        <p>age : 20, city : Pune</p>
+<body style="background-color: black; color:white">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
     </div>
 </body>
+<script>
+    const parentValue = document.querySelector(".parent")
+    console.log(parentValue)
+    console.log(parentValue.children)
+    parentValue.children[0].style.color = "red";
+
+    console.log(parentValue.firstElementChild)
+    console.log(parentValue.lastElementChild)
+
+    const dayValue = document.querySelector(".day")
+    console.log(dayValue)
+    console.log(dayValue.parentElement)
+    console.log(dayValue.nextElementSibling)
+</script>
 </html>

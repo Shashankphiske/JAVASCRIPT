@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI GENERATOR</title>
+</head>
+<body>
+    <h1>BMI CALCULATOR</h1>
+    <input type="text" placeholder="Height in cm" id="input1" class="input">
+    <input type="text" placeholder="Weight in kg" id="input2" class="input">
+    <button onclick="Calculate()">Calculate</button>
+    <h3 id="result">Result : </h3>
+</body>
+<script>
+    function Calculate(){
+        let cm = Number(document.getElementById("input1").innerHTML);
+        let kg = Number(document.getElementById("input2").innerHTML);
+        let bmi = kg / cm;
+        console.log(bmi)
+    }
+
+</script>
+</html>
