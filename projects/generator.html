@@ -14,8 +14,10 @@
 </body>
 <script>
     function Calculate(){
-        let cm = Number(document.getElementById("input1").innerHTML);
+        let cm = Number(document.getElementById("input1").nodeValue);
         let kg = Number(document.getElementById("input2").innerHTML);
+        console.log(cm)
+        console.log(kg)
         let bmi = kg / cm;
         console.log(bmi)
     }
