@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    const input = document.createElement("input");
+    const button = document.createElement("button");
+    input.placeholder = "Your Guess";
+    button.innerText = "GUESS";
+    const form = document.createElement("form");
+    document.body.appendChild(form);
+    form.appendChild(input);
+    form.appendChild(button);
+    let chances = 5;
+    let num = Math.floor((Math.random() * 100) + 1);
+
+    let h1 = document.createElement("h1");
+    document.body.appendChild(h1);
+    console.log(num);
+
+    function lost(){
+        if(chances <= 0){
+            h1.innerText = "you lost, new game started";
+            chances = 5
+            num = Math.floor((Math.random() * 100) + 1);
+        }
+    }
+
+    button.addEventListener("click", guessing, false);
+    function guessing(event){
+        event.preventDefault();
+        let value = input.value;
+        input.value = "";
+        chances--;
+        if(value == num){
+            h1.innerText = `Congrats, You guessed the number new game started ${chances}`;
+            num = Math.floor((Math.random() * 100) + 1);
+            chances = 5;
+        }
+        else if(value < num){
+            h1.innerText = `The number is smaller ${chances}`;
+            lost();
+        }
+        else if(value > num){
+            h1.innerText = `The number is greater ${chances}`;
+            lost();
+        }
+    }
+</script>
+</html>

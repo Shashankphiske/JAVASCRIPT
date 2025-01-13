@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNAKE GAME</title>
+</head>
+<body id="root">
+    <canvas class="myCanvas">
+        <p>Add suitable fallback here.</p>
+    </canvas>
+</body>
+<script>
+    const canvas = document.querySelector(".myCanvas");
+    const width = (canvas.width = window.innerWidth);
+    const height = (canvas.height = window.innerHeight);
+
+    const ctx = canvas.getContext("2d"); // special reference to the drawing area called as context
+    // ctx has this object : CanvasRenderingContext2D any changes to the canvas will be done through this object
+    // the object has functions to do so, you can do any changes or draw anything from this functions
+
+    ctx.fillstyle = "rgb(0,0,0)";
+    ctx.fillRect(0, 0, width, height); // drawing the rectangle : 0, 0 are the coordinated of the top left corner
+
+    ctx.fillStyle = "rgb(255 0 0)";
+    ctx.fillRect(50, 50, 100, 150);
+
+    ctx.fillStyle = "rgb(255 0 255 / 75%)"; // we drew semi transparent graphics here by specifing 75%
+    ctx.fillRect(25, 100, 175, 50);
+
+    ctx.strokeStyle = "rgb(255 255 255)"; // stroke is used just to draw rectangle outline and not fill the color
+    ctx.lineWidth = 5; // the default width is 1 but it can be changes by using the ctx.lineWidth property
+    ctx.strokeRect(25, 25, 175, 200);
+    
+    
+</script>
+</html>
